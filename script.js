@@ -28,7 +28,7 @@ document.addEventListener('keydown', (e) => {
         bird.style.top = '40vh';
         game_state = 'Play';
         message.innerHTML = '';
-        score_title.innerHTML = 'Score : ';
+        score_title.innerHTML = 'Pillars : ';
         score_val.innerHTML = '0';
         message.classList.remove('messageStyle');
         play();
@@ -49,7 +49,7 @@ function play(){
             }else{
                 if(bird_props.left < pipe_sprite_props.left + pipe_sprite_props.width && bird_props.left + bird_props.width > pipe_sprite_props.left && bird_props.top < pipe_sprite_props.top + pipe_sprite_props.height && bird_props.top + bird_props.height > pipe_sprite_props.top){
                     game_state = 'End';
-                    message.innerHTML = 'Game Over'.fontcolor('red') + '<br>Press Enter To Restart';
+                    message.innerHTML = 'Game is Over'.fontcolor('red') + '<br>Click ENTER To Restart';
                     message.classList.add('messageStyle');
                     img.style.display = 'none';
                     sound_die.play();
@@ -73,14 +73,14 @@ function play(){
         bird_dy = bird_dy + grativy;
         document.addEventListener('keydown', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = 'images/Bird-2.png';
+                img.src = 'images/birdy1.png';
                 bird_dy = -7.6;
             }
         });
 
         document.addEventListener('keyup', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = 'images/Bird.png';
+                img.src = 'images/birdy1.png';
             }
         });
 
